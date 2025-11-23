@@ -28,8 +28,4 @@ COPY . .
 EXPOSE 5000
 
 # Run the application with gunicorn for production
-# Use Flask development server for now (change to gunicorn for production)
-CMD ["python", "app.py"]
-
-# For production, use:
-# CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "4", "--timeout", "120", "app:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "4", "--timeout", "120", "app:app"]

@@ -1,0 +1,43 @@
+name: hannah-backend
+region: sfo3
+
+services:
+  - name: flask-api
+    # Build from Dockerfile
+    dockerfile_path: backend/Dockerfile
+    source_dir: /
+    github:
+      repo: hernantech/hannah_ai
+      branch: main
+      deploy_on_push: true
+
+    # Environment variables (set sensitive values in DO dashboard)
+    envs:
+      - key: FLASK_ENV
+        value: production
+      - key: FLASK_APP
+        value: app.py
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      # Add your FAL_KEY as a secret in the DO dashboard
+      - key: FAL_KEY
+        scope: RUN_TIME
+        type: SECRET
+
+    # Health check
+    health_check:
+      http_path: /health
+      initial_delay_seconds: 30
+      period_seconds: 10
+      timeout_seconds: 5
+      success_threshold: 1
+      failure_threshold: 3
+
+    # Instance configuration
+    instance_count: 1
+    instance_size_slug: basic-xxs  # $5/month - upgrade if needed
+
+    http_port: 5000
+
+    routes:
+      - path: /
