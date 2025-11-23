@@ -1,22 +1,41 @@
 PODS:
   - Flutter (1.0.0)
+  - flutter_leap_sdk (0.2.2):
+    - Flutter
+    - Leap-SDK (~> 0.5.0)
   - image_picker_ios (0.0.1):
+    - Flutter
+  - Leap-SDK (0.5.0)
+  - objective_c (0.0.1):
     - Flutter
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
+  - flutter_leap_sdk (from `.symlinks/plugins/flutter_leap_sdk/ios`)
   - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
+  - objective_c (from `.symlinks/plugins/objective_c/ios`)
+
+SPEC REPOS:
+  trunk:
+    - Leap-SDK
 
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
+  flutter_leap_sdk:
+    :path: ".symlinks/plugins/flutter_leap_sdk/ios"
   image_picker_ios:
     :path: ".symlinks/plugins/image_picker_ios/ios"
+  objective_c:
+    :path: ".symlinks/plugins/objective_c/ios"
 
 SPEC CHECKSUMS:
   Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
+  flutter_leap_sdk: acaf1e0e18eef6480a08c3ee804854967dbb509b
   image_picker_ios: 4f2f91b01abdb52842a8e277617df877e40f905b
+  Leap-SDK: 470d52faeb48a3aa29d1f619ab7aa51850bd5203
+  objective_c: 77e887b5ba1827970907e10e832eec1683f3431d
 
-PODFILE CHECKSUM: 3c63482e143d1b91d2d2560aee9fb04ecc74ac7e
+PODFILE CHECKSUM: 53a6aebc29ccee84c41f92f409fc20cd4ca011f1
 
 COCOAPODS: 1.16.2
