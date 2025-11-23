@@ -12,6 +12,8 @@ services:
       - FLASK_APP=app.py
       - FLASK_ENV=development
       - PYTHONUNBUFFERED=1
+    env_file:
+      - .env
     volumes:
       # Mount the app for development (hot reload)
       - .:/app

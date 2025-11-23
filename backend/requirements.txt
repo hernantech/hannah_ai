@@ -7,3 +7,9 @@ langchain-community==0.3.5
 python-dotenv==1.0.0
 gunicorn==21.2.0
 requests==2.31.0
+fal-client==0.9.1
+psycopg2-binary==2.9.9
+beautifulsoup4==4.12.2
+requests-toolbelt==1.0.0
+selenium>=4.6.0
+webdriver-manager==4.0.1
